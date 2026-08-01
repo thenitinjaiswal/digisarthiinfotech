@@ -3,6 +3,7 @@
 // Includes brand information, navigation links, legal links, and direct contact options.
 // Props: none
 
+import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Phone, Mail } from "lucide-react";
 import { WA_URL, PHONE, PHONE_TEL, EMAIL } from "@/lib/siteData";
@@ -16,15 +17,15 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2.5">
-              <div className="grid h-9 w-9 place-items-center rounded-xl bg-white/10 text-white">
-                <span className="font-display text-lg font-semibold">D</span>
-              </div>
-              <div className="leading-tight">
-                <div className="font-display text-base font-semibold text-white">Digisarthi</div>
-                <div className="font-mono-tabular text-[9px] uppercase tracking-[0.22em] text-mint">Info Tech</div>
-              </div>
-            </div>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logo-dark-bg.png"
+                alt="Digisarthi Info Tech"
+                width={180}
+                height={44}
+                className="h-9 w-auto object-contain"
+              />
+            </Link>
             <p className="mt-4 max-w-xs text-sm text-white/70">
               We build websites exclusively for doctors and clinics — one speciality-focused team you can trust with your online presence.
             </p>

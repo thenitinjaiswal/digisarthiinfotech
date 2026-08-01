@@ -10,6 +10,14 @@ export const metadata = {
   title: "Digisarthi Info Tech — Websites Built Exclusively for Doctors & Clinics",
   description: "We design websites exclusively for doctors and clinics — homeopathy, dental, general physicians, dermatology, pediatrics and more. Turn patient searches into booked appointments.",
   authors: [{ name: "Digisarthi Info Tech" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Digisarthi Info Tech — Websites Built Exclusively for Doctors & Clinics",
     description: "The web design team built specifically for doctors. Mobile-first websites, WhatsApp booking, local SEO — for every speciality.",
@@ -27,6 +35,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

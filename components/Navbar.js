@@ -5,6 +5,7 @@
 
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -32,13 +33,14 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-hairline bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-navy text-white">
-            <span className="font-display text-lg font-semibold">D</span>
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-base font-semibold text-navy">Digisarthi</div>
-            <div className="font-mono-tabular text-[9px] uppercase tracking-[0.22em] text-teal">Info Tech</div>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Digisarthi Info Tech"
+            width={180}
+            height={44}
+            className="h-9 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
